@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav Selukar - Certified Scrum Master | Agile Consultant | AI Automation Specialist</title>
+    <meta name="description" content="Portfolio of Vaibhav Selukar - Certified Professional Scrum Master with 6+ years of experience in Agile project management, AI automation, and vibe coding projects.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0A192F;
+            --light-navy: #112240;
+            --lightest-navy: #233554;
+            --mint: #64FFDA;
+            --slate: #8892B0;
+            --light-slate: #A8B2D1;
+            --lightest-slate: #CCD6F6;
+            --white: #FFFFFF;
+            --deep-navy: #020C1B;
+            --orange: #FF6B35;
+            --purple: #A855F7;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(100, 255, 218, 0.6);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Fira Code', 'SF Mono', 'Roboto Mono', 'Courier New', monospace;
+            background-color: var(--deep-navy);
+            color: var(--slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--mint) 0%, var(--purple) 100%);
+            width: 0%;
+            transition: width 0.1s ease;
+            z-index: 1001;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--mint);
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            animation: pulse 0.6s ease;
+            text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--lightest-slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--mint);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--mint);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links span {
+            color: var(--mint);
+            margin-right: 5px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--mint);
+            transition: all 0.3s ease;
+        }
+
+        section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        section.compact {
+            min-height: auto;
+        }
+
+        .section-content {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--lightest-slate);
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .section-title::before {
+            content: attr(data-number);
+            color: var(--mint);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section-title:hover::before {
+            transform: scale(1.2);
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: var(--lightest-navy);
+            max-width: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .section-title:hover::after {
+            background-color: var(--mint);
+            max-width: 400px;
+        }
+
+        #hero {
+            padding-top: 150px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-greeting {
+            color: var(--mint);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            color: var(--lightest-slate);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            color: var(--slate);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: var(--slate);
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            background-color: rgba(100, 255, 218, 0.1);
+            border: 1px solid var(--mint);
+            border-radius: 20px;
+            color: var(--mint);
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .badge:hover {
+            transform: scale(1.1);
+            background-color: rgba(100, 255, 218, 0.2);
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image-placeholder {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 4px solid var(--mint);
+            background: linear-gradient(135deg, var(--light-navy) 0%, var(--lightest-navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--mint);
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hero-image-placeholder:hover {
+            transform: rotate(5deg) scale(1.05);
+            border-color: var(--purple);
+            box-shadow: 0 10px 40px rgba(100, 255, 218, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border: 2px solid var(--mint);
+            color: var(--mint);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(100, 255, 218, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(100, 255, 218, 0.3);
+            animation: bounce 0.6s ease;
+        }
+
+        .cta-button.secondary {
+            border-color: var(--lightest-slate);
+            color: var(--lightest-slate);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: rgba(136, 146, 176, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            color: var(--slate);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-link:hover {
+            color: var(--mint);
+            transform: translateY(-3px) rotate(10deg);
+            animation: bounce 0.6s ease;
+            filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.6));
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--mint);
+        }
+
+        .stats-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background-color: var(--light-navy);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            border-color: var(--mint);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+            animation: pulse 0.6s ease;
+        }
+
+        .stat-card:hover .stat-number {
+            animation: pulse 0.6s ease;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            color: var(--mint);
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: var(--lightest-slate);
+            font-size: 0.9rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background-color: var(--light-navy);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--mint);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+        }
+
+        .skill-category:hover h3 {
+            color: var(--mint);
+            transform: translateX(5px);
+        }
+
+        .skill-category h3 {
+            color: var(--lightest-slate);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--slate);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            color: var(--mint);
+            position: absolute;
+            left: 0;
+        }
+
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--lightest-navy);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background-color: var(--mint);
+            border-radius: 50%;
+            transform: translateX(-5px);
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            color: var(--lightest-slate);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            color: var(--mint);
+            font-size: 1.1rem;
+        }
+
+        .experience-date {
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-description {
+            list-style: none;
+        }
+
+        .experience-description li {
+            padding: 0.5rem 0;
+            color: var(--slate);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li::before {
+            content: '▹';
+            color: var(--mint);
+            position: absolute;
+            left: 0;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-card {
+            background-color: var(--light-navy);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: default;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-8px) rotateY(5deg);
+            border-color: var(--mint);
+            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+        }
+
+        .cert-card:hover .cert-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-title {
+            color: var(--lightest-slate);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-org {
+            color: var(--mint);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: var(--slate);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: rgba(100, 255, 218, 0.1);
+            border: 1px solid var(--mint);
+            color: var(--mint);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link:hover {
+            background-color: var(--mint);
+            color: var(--navy);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--light-navy);
+            padding: 0;
+            border-radius: 4px;
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--mint);
+            box-shadow: 0 15px 40px rgba(100, 255, 218, 0.2);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--lightest-navy) 0%, var(--light-navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--mint);
+            transition: all 0.3s ease;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            color: var(--lightest-slate);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--slate);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tag {
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(100, 255, 218, 0.1);
+            border: 1px solid var(--mint);
+            border-radius: 15px;
+            color: var(--mint);
+            font-size: 0.75rem;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .project-tag:hover {
+            transform: scale(1.1);
+            background-color: var(--mint);
+            color: var(--navy);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            padding: 0.5rem 1rem;
+            background-color: rgba(100, 255, 218, 0.1);
+            border: 1px solid var(--mint);
+            color: var(--mint);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: var(--mint);
+            color: var(--navy);
+        }
+
+        .project-link.youtube {
+            border-color: #FF0000;
+            color: #FF0000;
+            background-color: rgba(255, 0, 0, 0.1);
+        }
+
+        .project-link.youtube:hover {
+            background-color: #FF0000;
+            color: var(--white);
+        }
+
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .affiliate-card {
+            background-color: var(--light-navy);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 2px solid var(--orange);
+            transition: all 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .affiliate-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.4);
+            animation: glow 2s ease infinite;
+        }
+
+        .affiliate-card:hover .affiliate-icon {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .affiliate-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .affiliate-title {
+            color: var(--lightest-slate);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-description {
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--orange) 0%, #ff8c42 100%);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .affiliate-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        .affiliate-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(255, 107, 53, 0.2);
+            color: var(--orange);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 3rem;
+            color: var(--lightest-slate);
+            margin-bottom: 1rem;
+        }
+
+        .contact-description {
+            font-size: 1.1rem;
+            color: var(--slate);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .contact-card {
+            background-color: var(--light-navy);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .contact-card:hover {
+            border-color: var(--mint);
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+        }
+
+        .contact-card-title {
+            color: var(--mint);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .contact-card-value {
+            color: var(--lightest-slate);
+            font-size: 1rem;
+        }
+
+        .contact-card-value a {
+            color: var(--lightest-slate);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card-value a:hover {
+            color: var(--mint);
+        }
+
+        .social-links-section {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link-large {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-navy);
+            border: 1px solid var(--lightest-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--slate);
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link-large:hover {
+            border-color: var(--mint);
+            color: var(--mint);
+            transform: translateY(-8px) rotate(360deg) scale(1.15);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+            animation: bounce 0.6s ease;
+        }
+
+        footer {
+            background-color: var(--navy);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--slate);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--slate);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--mint);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--light-navy);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .mobile-menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .section-title::after {
+                max-width: 100px;
+            }
+
+            section {
+                padding: 80px 1.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .skills-grid,
+            .certifications-grid,
+            .affiliate-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="progress-bar" id="progressBar"></div>
+        <nav>
+            <div class="logo">VAIBHAV SELUKAR</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#vibe-coding">Vibe Coding</a></li>
+                <li><a href="#affiliates">Partners</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="section-content">
+            <div class="hero-grid">
+                <div>
+                    <p class="hero-greeting">Hello, I am</p>
+                    <h1 class="hero-title">Vaibhav Selukar.</h1>
+                    <h2 class="hero-subtitle">Certified Scrum Master & Agile Consultant</h2>
+                    <div class="hero-badges">
+                        <span class="badge">PSM Certified</span>
+                        <span class="badge">PMP Certified</span>
+                        <span class="badge">6+ Years Experience</span>
+                        <span class="badge">AI Automation</span>
+                    </div>
+                    <p class="hero-description">
+                        I'm a results-driven Agile professional with 6+ years of experience leading distributed teams across Financial Services, SaaS, and Tech domains. I specialize in remote Agile facilitation, coaching cross-functional teams, driving continuous improvement, and building AI automation solutions with modern vibe coding tools.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                        <a href="#vibe-coding" class="cta-button secondary">View My Projects</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">💼</a>
+                        <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="social-link" title="Credly">🏆</a>
+                        <a href="https://github.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">👨‍💻</a>
+                        <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">📺</a>
+                        <a href="https://twitter.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter/X">🐦</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">👨‍💼</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <h2 class="section-title" data-number="01.">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>
+                        I'm a <span class="highlight">Certified Professional Scrum Master (PSM)</span> and <span class="highlight">Project Management Professional (PMP)</span> with over 6 years of experience in Agile project management across diverse domains including Financial Services, SaaS, EdTech, NBFC, and E-commerce.
+                    </p>
+                    <p>
+                        My expertise lies in leading distributed Agile teams remotely using modern collaboration tools like Jira, Confluence, Zoom, and MS Teams. I've successfully coached cross-functional squads, facilitated sprint ceremonies across time zones, and driven data-driven delivery optimization through metrics like sprint velocity, burndown charts, and throughput analysis.
+                    </p>
+                    <p>
+                        Recently, I've been exploring the exciting world of <span class="highlight">AI automation and vibe coding</span>, building innovative solutions using cutting-edge tools like Replit, Bolt, v0, and other AI-powered development platforms. This has allowed me to create rapid prototypes and full-stack applications with unprecedented speed and efficiency.
+                    </p>
+                    <p>
+                        I'm passionate about fostering high-performing, self-organizing teams and embedding a continuous improvement culture in remote environments. My approach combines servant leadership with strategic facilitation to remove blockers and empower teams to achieve their full potential.
+                    </p>
+                    <p>
+                        Currently based in <span class="highlight">Nagpur, Maharashtra</span>, I'm open to remote, hybrid, and office opportunities as a Scrum Master, Agile Consultant, and AI Automation Specialist.
+                    </p>
+                </div>
+                <div class="stats-grid fade-in">
+                    <div class="stat-card">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15%</div>
+                        <div class="stat-label">Efficiency Boost</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">AI Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2 class="section-title" data-number="02.">Skills & Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>🎯 Agile Facilitation</h3>
+                    <ul class="skill-list">
+                        <li>Remote Scrum Ceremonies</li>
+                        <li>Sprint Planning & Retrospectives</li>
+                        <li>Backlog Refinement & Grooming</li>
+                        <li>Daily Stand-ups (Zoom/MS Teams)</li>
+                        <li>Asynchronous Communication</li>
+                        <li>PI Planning & SAFe</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>👨‍🏫 Leadership & Coaching</h3>
+                    <ul class="skill-list">
+                        <li>Servant Leadership</li>
+                        <li>Team Empowerment</li>
+                        <li>Stakeholder Mentoring</li>
+                        <li>Self-Organization Promotion</li>
+                        <li>Psychological Safety</li>
+                        <li>Conflict Resolution</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>🛠️ Agile Tools & Metrics</h3>
+                    <ul class="skill-list">
+                        <li>Jira & Confluence</li>
+                        <li>Sprint Velocity Tracking</li>
+                        <li>Burndown & Burnup Charts</li>
+                        <li>Cumulative Flow Diagrams</li>
+                        <li>Agile Dashboards</li>
+                        <li>Lucidchart & Miro</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>📊 Project Management</h3>
+                    <ul class="skill-list">
+                        <li>Release Planning</li>
+                        <li>Risk Management</li>
+                        <li>Stakeholder Collaboration</li>
+                        <li>Capacity Planning</li>
+                        <li>PMO & Reporting</li>
+                        <li>Dependency Tracking</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>🏢 Domain Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Banking & Financial Services</li>
+                        <li>Loan Systems & CRM</li>
+                        <li>Trading Platforms</li>
+                        <li>SaaS & Cloud Solutions</li>
+                        <li>EdTech & LMS</li>
+                        <li>E-commerce Platforms</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>🤖 AI & Vibe Coding</h3>
+                    <ul class="skill-list">
+                        <li>Replit AI Development</li>
+                        <li>Bolt.new Applications</li>
+                        <li>v0 by Vercel</li>
+                        <li>AI Automation Tools</li>
+                        <li>AI Agent Building</li>
+                        <li>Rapid Prototyping</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>💡 Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Time Management</li>
+                        <li>Empathy & Active Listening</li>
+                        <li>Proactive Communication</li>
+                        <li>Cross-functional Engagement</li>
+                        <li>Problem Solving</li>
+                        <li>Continuous Learning</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>🎓 Education</h3>
+                    <ul class="skill-list">
+                        <li>B.E. Electrical Engineering</li>
+                        <li>Yeshwantrao Chavan College</li>
+                        <li>Nagpur, Maharashtra (2005)</li>
+                        <li>AI Training Coordinator</li>
+                        <li>Multiple Engineering Colleges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-content">
+            <h2 class="section-title" data-number="03.">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Senior Consultant | Scrum Master</h3>
+                        <div class="experience-company">Freelance Consulting</div>
+                        <div class="experience-date">Jan 2024 – Present | Remote/Nagpur</div>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Leading Agile delivery for global teams across multiple time zones, coaching cross-functional squads in remote settings</li>
+                        <li>Facilitating all Scrum ceremonies via Zoom and MS Teams; optimizing virtual backlog grooming using Jira</li>
+                        <li>Analyzing Agile metrics (velocity, cycle time, throughput) to boost team performance and engagement by 15%</li>
+                        <li>Maintaining comprehensive digital project artifacts including sprint goals, risk logs, burndown charts, and stakeholder dashboards</li>
+                        <li>Introducing asynchronous stand-ups and Kanban boards to support distributed teams across geographies</li>
+                        <li>Coaching teams on Scrum principles, promoting self-organization and servant leadership practices</li>
+                        <li>Building AI automation solutions and vibe coding projects using Replit, Bolt, and v0 platforms</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Senior Consultant</h3>
+                        <div class="experience-company">PRAGMATYC (Formerly MAXIMESS)</div>
+                        <div class="experience-date">Sep 2021 – Dec 2023 | Hybrid/Remote</div>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Spearheaded Agile implementation for BFSI and SaaS clients using Scrum & Kanban frameworks</li>
+                        <li>Led sprint ceremonies for distributed teams including remote retrospectives, planning, and demos</li>
+                        <li>Developed comprehensive Jira dashboards and Confluence spaces for virtual stakeholder visibility</li>
+                        <li>Conducted remote PI Planning sessions for multi-team coordination using SAFe practices</li>
+                        <li>Increased remote team efficiency by 10% through improved communication workflows and processes</li>
+                        <li>Mentored junior Scrum Masters and Business Analysts in Agile best practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Senior Business Analyst</h3>
+                        <div class="experience-company">SimpleWorks Solutions Pvt. Ltd.</div>
+                        <div class="experience-date">Dec 2020 – Sep 2021 | Hybrid/Remote</div>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Supported Agile PMO remotely; documented scope, budget, and sprint progress in real-time</li>
+                        <li>Trained cross-functional teams on remote Scrum tools and Agile methodologies</li>
+                        <li>Introduced automated sprint tracking reports improving transparency and accountability</li>
+                        <li>Enabled distributed Agile collaboration reducing delays and improving throughput by 15%</li>
+                        <li>Collaborated with Product Owners to refine product backlogs and prioritize features</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Business Analyst & Scrum Facilitator</h3>
+                        <div class="experience-company">MAXIMESS (Now PRAGMATYC)</div>
+                        <div class="experience-date">Aug 2018 – Dec 2020 | Hybrid/Remote</div>
+                    </div>
+                    <ul class="experience-description">
+                        <li>Led Agile ceremonies including remote sprint planning, backlog grooming, and retrospectives</li>
+                        <li>Designed remote-first Agile workflows using Jira, Lucidchart, and Confluence</li>
+                        <li>Coached cross-functional teams in applying Scrum remotely improving delivery velocity by 15%</li>
+                        <li>Gathered and documented business requirements for Financial Services and EdTech projects</li>
+                        <li>Created user stories, acceptance criteria, and technical specifications</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item fade-in">
+                    <div class="experience-header">
+                        <h3 class="experience-title">Previous Roles</h3>
+                    </div>
+                    <ul class="experience-description">
+                        <li><strong>Business Analyst</strong> – Walbro Software Pvt. Ltd. | Oct 2017 – Mar 2018</li>
+                        <li><strong>Entrepreneur</strong> – Self-Employed/Business | Mar 2016 – Dec 2017</li>
+                        <li><strong>Team Lead</strong> – Principal Financial Group | Dec 2006 – Dec 2015 (9 years)</li>
+                        <li><strong>Support Lead</strong> – IBM Daksh | Oct 2005 – Nov 2006</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="compact">
+        <div class="section-content">
+            <h2 class="section-title" data-number="04.">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">🏆</div>
+                    <h3 class="cert-title">Professional Scrum Master (PSM)</h3>
+                    <div class="cert-org">Scrum.org</div>
+                    <div class="cert-date">Sep 2024</div>
+                    <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="cert-link">View on Credly</a>
+                </div>
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">📋</div>
+                    <h3 class="cert-title">Project Management Professional (PMP)</h3>
+                    <div class="cert-org">IMTF</div>
+                    <div class="cert-date">Aug 2023</div>
+                    <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="cert-link">View on Credly</a>
+                </div>
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">💡</div>
+                    <h3 class="cert-title">New Product Development (NPD)</h3>
+                    <div class="cert-org">IIM Bangalore</div>
+                    <div class="cert-date">Dec 2023</div>
+                    <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="cert-link">View Certificate</a>
+                </div>
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">🎯</div>
+                    <h3 class="cert-title">Project Management Skills for Leaders</h3>
+                    <div class="cert-org">PMI</div>
+                    <div class="cert-date">Jun 2023</div>
+                    <a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer" class="cert-link">View on PMI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="compact">
+        <div class="section-content">
+            <h2 class="section-title" data-number="05.">Professional Project Domains</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">💰</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Finance-Tech</h3>
+                        <p class="project-description">
+                            Agile transformation of digital trading & loan systems for NBFCs. Led distributed teams in implementing modern banking solutions with focus on regulatory compliance and security.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">📚</div>
+                    <div class="project-content">
+                        <h3 class="project-title">EdTech</h3>
+                        <p class="project-description">
+                            Remote delivery of LMS and e-commerce platforms using Scrum & Kanban. Facilitated agile development for educational technology solutions serving thousands of students.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">👥</div>
+                    <div class="project-content">
+                        <h3 class="project-title">HR SaaS</h3>
+                        <p class="project-description">
+                            Cloud-based HRMS implementation for remote-first organizations. Coached teams in building scalable HR solutions with modern workforce management capabilities.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">🚗</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automotive CRM</h3>
+                        <p class="project-description">
+                            Built platforms for EV companies supporting distributed sales/service operations. Led agile teams in creating innovative customer relationship management solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">🤖</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Training Coordination</h3>
+                        <p class="project-description">
+                            Coordinated and managed AI trainees from St. Vincent Pallotti College of Engineering and Technology and Anjuman College of Engineering and Technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">🛍️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce</h3>
+                        <p class="project-description">
+                            Delivered scalable e-commerce platforms using agile methodologies. Facilitated cross-functional collaboration between development, design, and business teams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vibe-coding" class="compact">
+        <div class="section-content">
+            <h2 class="section-title" data-number="06.">Vibe Coding & AI Projects</h2>
+            <p style="text-align: center; color: var(--slate); margin-bottom: 3rem; font-size: 1.1rem;">
+                Exploring AI automation and building innovative solutions with modern vibe coding tools
+            </p>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">🎨</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website Builder</h3>
+                        <p class="project-description">
+                            A comprehensive single-page portfolio website built with Replit Agent. Features responsive design, smooth animations, and modern developer aesthetic.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Replit</span>
+                            <span class="project-tag">HTML/CSS/JS</span>
+                            <span class="project-tag">AI-Generated</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-portfolio-url.replit.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🚀</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Task Automation Dashboard</h3>
+                        <p class="project-description">
+                            Built a task automation dashboard using Bolt.new that streamlines Agile workflows and sprint planning with AI-powered suggestions.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Bolt.new</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">AI Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-bolt-project.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">💬</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Chatbot for Scrum Masters</h3>
+                        <p class="project-description">
+                            An AI-powered chatbot assistant built with v0 by Vercel that helps Scrum Masters with daily stand-ups, retrospective facilitation, and Agile best practices.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">v0 by Vercel</span>
+                            <span class="project-tag">Next.js</span>
+                            <span class="project-tag">AI Agent</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-v0-project.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">📊</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Agile Metrics Analyzer</h3>
+                        <p class="project-description">
+                            A comprehensive metrics dashboard built with Replit that visualizes sprint velocity, burndown charts, and team performance analytics in real-time.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Replit</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data Viz</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-metrics-dashboard.replit.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🎯</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sprint Planning Assistant</h3>
+                        <p class="project-description">
+                            An AI-powered sprint planning tool that helps teams estimate story points, identify dependencies, and optimize sprint capacity using machine learning.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Bolt.new</span>
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">ML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-sprint-planner.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">🔄</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Retrospective Idea Generator</h3>
+                        <p class="project-description">
+                            A creative tool built with v0 that generates unique retrospective formats, icebreakers, and facilitation techniques for engaging team retrospectives.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">v0 by Vercel</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">AI Content</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://your-retro-generator.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                            <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="project-link youtube">🎬 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="affiliates" class="compact">
+        <div class="section-content">
+            <h2 class="section-title" data-number="07.">Affiliate Partners & Tools I Use</h2>
+            <p style="text-align: center; color: var(--slate); margin-bottom: 3rem; font-size: 1.1rem;">
+                These are the amazing tools I use daily to build AI-powered solutions. Support my work by trying them out!
+            </p>
+            <div class="affiliate-grid">
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">🔮</div>
+                    <h3 class="affiliate-title">Replit</h3>
+                    <p class="affiliate-description">
+                        The ultimate AI-powered development platform. Build, deploy, and scale applications with Replit Agent - my go-to tool for rapid prototyping and full-stack development.
+                    </p>
+                    <a href="https://replit.com?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Replit Free 🚀</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">⚡</div>
+                    <h3 class="affiliate-title">Bolt.new</h3>
+                    <p class="affiliate-description">
+                        Create full-stack web applications with AI in seconds. Bolt.new by StackBlitz is perfect for building React, Vue, and Next.js applications with incredible speed.
+                    </p>
+                    <a href="https://bolt.new?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Start Building 🔥</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title">v0 by Vercel</h3>
+                    <p class="affiliate-description">
+                        Generate beautiful UI components with AI. v0 transforms your ideas into production-ready React code in seconds. Perfect for building modern web interfaces.
+                    </p>
+                    <a href="https://v0.dev?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try v0 Now ✨</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">🤖</div>
+                    <h3 class="affiliate-title">Cursor AI</h3>
+                    <p class="affiliate-description">
+                        The AI-first code editor that supercharges your development workflow. Write code faster with AI pair programming and intelligent code completion.
+                    </p>
+                    <a href="https://cursor.sh?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Get Cursor 💻</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">🎨</div>
+                    <h3 class="affiliate-title">Midjourney</h3>
+                    <p class="affiliate-description">
+                        Create stunning AI-generated images for your projects. Perfect for creating professional graphics, mockups, and visual content for presentations and portfolios.
+                    </p>
+                    <a href="https://midjourney.com?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Explore Midjourney 🎨</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">📝</div>
+                    <h3 class="affiliate-title">Claude AI</h3>
+                    <p class="affiliate-description">
+                        Anthropic's powerful AI assistant for coding, writing, and analysis. Use Claude for complex problem-solving, code reviews, and documentation generation.
+                    </p>
+                    <a href="https://claude.ai?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Claude 🧠</a>
+                    <div class="affiliate-badge">💰 Earn Commission</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="compact">
+        <div class="section-content">
+            <div class="contact-content fade-in">
+                <h2 class="section-title" data-number="08." style="justify-content: center;">Get In Touch</h2>
+                <p class="contact-description">
+                    I'm currently open to remote, hybrid, and office opportunities as a Scrum Master, Agile Consultant, and AI Automation Specialist. Whether you have a project, a question, or just want to connect, I'd love to hear from you!
+                </p>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-title">📧 Email</div>
+                        <div class="contact-card-value">
+                            <a href="mailto:vaibhav.selukar@gmail.com">vaibhav.selukar@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-title">📱 Phone</div>
+                        <div class="contact-card-value">
+                            <a href="tel:+918805555263">+91 8805555263</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-title">📍 Location</div>
+                        <div class="contact-card-value">Nagpur, Maharashtra, India</div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-title">💼 LinkedIn</div>
+                        <div class="contact-card-value">
+                            <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer">vaibhav-selukar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links-section">
+                    <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="social-link-large" title="LinkedIn">💼</a>
+                    <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="social-link-large" title="Credly Certifications">🏆</a>
+                    <a href="https://github.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link-large" title="GitHub">👨‍💻</a>
+                    <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link-large" title="YouTube">📺</a>
+                    <a href="https://twitter.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" class="social-link-large" title="Twitter/X">🐦</a>
+                    <a href="mailto:vaibhav.selukar@gmail.com" class="social-link-large" title="Email">📧</a>
+                </div>
+
+                <a href="mailto:vaibhav.selukar@gmail.com" class="cta-button">Send Me an Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#skills" class="footer-link">Skills</a>
+                <a href="#experience" class="footer-link">Experience</a>
+                <a href="#certifications" class="footer-link">Certifications</a>
+                <a href="#vibe-coding" class="footer-link">Vibe Coding</a>
+                <a href="#affiliates" class="footer-link">Partners</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </div>
+            <p>&copy; 2025 Vaibhav Selukar. Built with vanilla HTML, CSS & JavaScript.</p>
+            <p style="margin-top: 0.5rem; color: var(--mint);">Certified Professional Scrum Master | PMP | Agile Consultant | AI Automation Specialist</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">LinkedIn</a> • 
+                <a href="https://github.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">GitHub</a> • 
+                <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">YouTube</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        const progressBar = document.getElementById('progressBar');
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navLinkItems = document.querySelectorAll('.nav-links a');
+
+        function updateProgressBar() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = scrollPercentage + '%';
+        }
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            updateProgressBar();
+        });
+
+        updateProgressBar();
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinkItems.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
