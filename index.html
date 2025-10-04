@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaibhav Selukar - Certified Scrum Master | Agile Consultant | AI Automation Specialist</title>
-    <meta name="description" content="Portfolio of Vaibhav Selukar - Certified Professional Scrum Master with 6+ years of experience in Agile project management, AI automation, and vibe coding projects.">
+    <meta name="description" content="Portfolio of Vaibhav Selukar - Certified Professional Scrum Master with 7+ years of experience in Agile project management, AI Agents, Automation, and Vibe coding projects.">
     <style>
         * {
             margin: 0;
@@ -134,7 +134,7 @@
 
         .logo {
             font-size: 1.5rem;
-            color: var(--mint);
+            color: var(--orange);
             font-weight: bold;
             letter-spacing: 2px;
             cursor: pointer;
@@ -144,6 +144,13 @@
         .logo:hover {
             animation: pulse 0.6s ease;
             text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        /* related resource: firestcode.html:135:9 */
+        .logo { /* the element was .logo */
+            text-shadow: none;
+            filter: drop-shadow(rgb(100, 255, 218) 0px 0px 10px);
+            animation: glow 2s infinite;
         }
 
         .nav-links {
@@ -299,9 +306,9 @@
         .badge {
             padding: 0.5rem 1rem;
             background-color: rgba(100, 255, 218, 0.1);
-            border: 1px solid var(--mint);
+            border: 1px solid var(--orange);
             border-radius: 20px;
-            color: var(--mint);
+            color: var(--orange);
             font-size: 0.85rem;
             transition: all 0.3s ease;
             cursor: default;
@@ -316,7 +323,15 @@
         .hero-image {
             text-align: center;
         }
-
+        img {
+             border-radius: 25%;
+             border: 4px solid var(--orange);
+             box-shadow: 0 10px 30px rgba(228, 111, 22, 0.2);
+             transition: all 0.3s ease;
+             max-width: 100%;
+             height: auto;
+            }
+/* This code is for the image placeholder if actual images are not used.
         .hero-image-placeholder {
             width: 300px;
             height: 300px;
@@ -334,11 +349,11 @@
         }
 
         .hero-image-placeholder:hover {
-            transform: rotate(5deg) scale(1.05);
+            animation: normal 0.3s ease;
             border-color: var(--purple);
-            box-shadow: 0 10px 40px rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 40px rgba(247, 80, 8, 0.3);
         }
-
+*/
         .cta-buttons {
             display: flex;
             gap: 1.5rem;
@@ -939,6 +954,11 @@
             padding: 3rem 2rem;
             text-align: center;
             color: var(--slate);
+
+            hr.rounded {
+            border-top: 8px solid #bbb;
+            border-radius: 5px;
+            }
         }
 
         .footer-content {
@@ -956,7 +976,7 @@
 
         .footer-link {
             color: var(--slate);
-            text-decoration: none;
+            text-decoration:solid none;
             transition: color 0.3s ease;
         }
 
@@ -1059,7 +1079,7 @@
     <header id="header">
         <div class="progress-bar" id="progressBar"></div>
         <nav>
-            <div class="logo">VAIBHAV SELUKAR</div>
+            <div class="logo"> VAIBHAV SELUKAR </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -1084,15 +1104,17 @@
                 <div>
                     <p class="hero-greeting">Hello, I am</p>
                     <h1 class="hero-title">Vaibhav Selukar.</h1>
-                    <h2 class="hero-subtitle">Certified Scrum Master & Agile Consultant</h2>
+                    <h2 class="hero-subtitle">Certified Professional  Scrum Master | Agile Consultant</h2>
                     <div class="hero-badges">
                         <span class="badge">PSM Certified</span>
                         <span class="badge">PMP Certified</span>
-                        <span class="badge">6+ Years Experience</span>
+                        <span class="badge">7+ Years Experience</span>
+                        <span class="badge">Vibe Coding Enthusiast</span>
+                        <span class="badge">AI Agents Explorer</span>
                         <span class="badge">AI Automation</span>
                     </div>
                     <p class="hero-description">
-                        I'm a results-driven Agile professional with 6+ years of experience leading distributed teams across Financial Services, SaaS, and Tech domains. I specialize in remote Agile facilitation, coaching cross-functional teams, driving continuous improvement, and building AI automation solutions with modern vibe coding tools.
+                        I'm a results-driven Agile professional with 7+ years of experience leading distributed teams across Financial Services, SaaS, and Tech domains. I specialize in remote Agile facilitation, coaching cross-functional teams, driving continuous improvement, and building AI automation solutions with modern Vibe coding tools.
                     </p>
                     <div class="cta-buttons">
                         <a href="#contact" class="cta-button">Get In Touch</a>
@@ -1107,7 +1129,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="hero-image-placeholder">👨‍💼</div>
+                    <img src="attached_assets/VaibhavSelukar - bg.PNG " alt="vaibhav-selukar" style="width:auto" >
                 </div>
             </div>
         </div>
@@ -1119,13 +1141,13 @@
             <div class="about-grid">
                 <div class="about-text fade-in">
                     <p>
-                        I'm a <span class="highlight">Certified Professional Scrum Master (PSM)</span> and <span class="highlight">Project Management Professional (PMP)</span> with over 6 years of experience in Agile project management across diverse domains including Financial Services, SaaS, EdTech, NBFC, and E-commerce.
+                        I'm a <span class="highlight">Certified Professional Scrum Master (PSM)</span> and <span class="highlight">Project Management Professional (PMP)</span> with over 7 years of experience in Agile project management across diverse domains including Financial Services, SaaS, EdTech, NBFC, and E-commerce.
                     </p>
                     <p>
                         My expertise lies in leading distributed Agile teams remotely using modern collaboration tools like Jira, Confluence, Zoom, and MS Teams. I've successfully coached cross-functional squads, facilitated sprint ceremonies across time zones, and driven data-driven delivery optimization through metrics like sprint velocity, burndown charts, and throughput analysis.
                     </p>
                     <p>
-                        Recently, I've been exploring the exciting world of <span class="highlight">AI automation and vibe coding</span>, building innovative solutions using cutting-edge tools like Replit, Bolt, v0, and other AI-powered development platforms. This has allowed me to create rapid prototypes and full-stack applications with unprecedented speed and efficiency.
+                        Recently, I've been exploring the exciting world of <span class="highlight">AI Agents, Automation and Vibe coding</span>, building innovative solutions using cutting-edge tools like Replit, Bolt, v0, and other AI-powered development platforms. This has allowed me to create rapid prototypes and full-stack applications with unprecedented speed and efficiency.
                     </p>
                     <p>
                         I'm passionate about fostering high-performing, self-organizing teams and embedding a continuous improvement culture in remote environments. My approach combines servant leadership with strategic facilitation to remove blockers and empower teams to achieve their full potential.
@@ -1136,7 +1158,7 @@
                 </div>
                 <div class="stats-grid fade-in">
                     <div class="stat-card">
-                        <div class="stat-number">6+</div>
+                        <div class="stat-number">7+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
@@ -1144,7 +1166,7 @@
                         <div class="stat-label">Efficiency Boost</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">4</div>
+                        <div class="stat-number">5</div>
                         <div class="stat-label">Certifications</div>
                     </div>
                     <div class="stat-card">
@@ -1268,7 +1290,7 @@
                         <li>Maintaining comprehensive digital project artifacts including sprint goals, risk logs, burndown charts, and stakeholder dashboards</li>
                         <li>Introducing asynchronous stand-ups and Kanban boards to support distributed teams across geographies</li>
                         <li>Coaching teams on Scrum principles, promoting self-organization and servant leadership practices</li>
-                        <li>Building AI automation solutions and vibe coding projects using Replit, Bolt, and v0 platforms</li>
+                        <li>Building AI automation solutions and Vibe coding projects using Replit, Bolt, and v0 platforms</li>
                     </ul>
                 </div>
 
@@ -1337,6 +1359,13 @@
         <div class="section-content">
             <h2 class="section-title" data-number="04.">Certifications</h2>
             <div class="certifications-grid">
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">🏆</div>
+                    <h3 class="cert-title">Generative AI Overview for Project Managaers</h3>
+                    <div class="cert-org">Project Management Institute</div>
+                    <div class="cert-date">Apr 2025</div>
+                    <a href="https://www.credly.com/users/vaibhav-selukar" target="_blank" rel="noopener noreferrer" class="cert-link">View on Credly</a>
+                </div>
                 <div class="cert-card fade-in">
                     <div class="cert-icon">🏆</div>
                     <h3 class="cert-title">Professional Scrum Master (PSM)</h3>
@@ -1435,7 +1464,7 @@
         <div class="section-content">
             <h2 class="section-title" data-number="06.">Vibe Coding & AI Projects</h2>
             <p style="text-align: center; color: var(--slate); margin-bottom: 3rem; font-size: 1.1rem;">
-                Exploring AI automation and building innovative solutions with modern vibe coding tools
+                Exploring AI automation and building innovative solutions with modern Vibe coding tools
             </p>
             <div class="projects-grid">
                 <div class="project-card fade-in">
@@ -1568,8 +1597,8 @@
                     <p class="affiliate-description">
                         The ultimate AI-powered development platform. Build, deploy, and scale applications with Replit Agent - my go-to tool for rapid prototyping and full-stack development.
                     </p>
-                    <a href="https://replit.com?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Replit Free 🚀</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <a href="https://replit.com/refer/vjvaibhu" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Replit Free 🚀</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
 
                 <div class="affiliate-card fade-in">
@@ -1578,8 +1607,8 @@
                     <p class="affiliate-description">
                         Create full-stack web applications with AI in seconds. Bolt.new by StackBlitz is perfect for building React, Vue, and Next.js applications with incredible speed.
                     </p>
-                    <a href="https://bolt.new?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Start Building 🔥</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <a href="https://bolt.new/?rid=3v6oaw" target="_blank" rel="noopener noreferrer" class="affiliate-link">Start Building 🔥</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
 
                 <div class="affiliate-card fade-in">
@@ -1589,7 +1618,7 @@
                         Generate beautiful UI components with AI. v0 transforms your ideas into production-ready React code in seconds. Perfect for building modern web interfaces.
                     </p>
                     <a href="https://v0.dev?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try v0 Now ✨</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
 
                 <div class="affiliate-card fade-in">
@@ -1599,7 +1628,7 @@
                         The AI-first code editor that supercharges your development workflow. Write code faster with AI pair programming and intelligent code completion.
                     </p>
                     <a href="https://cursor.sh?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Get Cursor 💻</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
 
                 <div class="affiliate-card fade-in">
@@ -1609,7 +1638,7 @@
                         Create stunning AI-generated images for your projects. Perfect for creating professional graphics, mockups, and visual content for presentations and portfolios.
                     </p>
                     <a href="https://midjourney.com?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Explore Midjourney 🎨</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
 
                 <div class="affiliate-card fade-in">
@@ -1619,8 +1648,99 @@
                         Anthropic's powerful AI assistant for coding, writing, and analysis. Use Claude for complex problem-solving, code reviews, and documentation generation.
                     </p>
                     <a href="https://claude.ai?ref=vaibhavselukar" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Claude 🧠</a>
-                    <div class="affiliate-badge">💰 Earn Commission</div>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
                 </div>
+
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Razorpay Payments </h3>
+                    <p class="affiliate-description">
+                        India's leading payment gateway for businesses. Seamlessly integrate payments into your applications with Razorpay's robust APIs and developer-friendly tools.
+                    </p>
+                    <a href="https://rzp.io/rzp/JADb7Mz" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Razorpay Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Sendgrid </h3>
+                    <p class="affiliate-description">
+                        The world's leading email delivery platform. Send transactional and marketing emails with ease using Sendgrid's powerful APIs and reliable infrastructure.                        
+                    </p>
+                    <a href="https://sendgrid.com/en-us?ref=ruvab" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Sendgrid Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Zoho </h3>
+                    <p class="affiliate-description">
+                        Comprehensive suite of business applications. From CRM to project management, Zoho provides tools to streamline operations and enhance productivity.                                                
+                    </p>
+                    <a href="https://go.zoho.com/vJp" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Zoho Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Fiverr </h3>
+                    <p class="affiliate-description">
+                        The world's largest freelance services marketplace. Hire top talent for your projects or offer your skills to a global audience on Fiverr.                                                
+                    </p>
+                    <a href="https://go.fiverr.com/visit/?bta=1141546&brand=fiverrmarketplace" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Fiverr Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Logo Maker </h3>
+                    <p class="affiliate-description">
+                        AI-powered logo design tool. Create professional logos in minutes with Logo Maker's intuitive interface and vast design options.                                                
+                    </p>
+                    <a href="https://go.fiverr.com/visit/?bta=1141546&brand=logomaker" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Logo Maker Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Canva </h3>
+                    <p class="affiliate-description">
+                        The world's leading design platform. Create stunning graphics, presentations, and social media content with Canva's easy-to-use tools and templates.                                                
+                    </p>
+                    <a href="https://www.canva.com/join/xtb-zqc-cqc" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Canva Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Hostinger </h3>
+                    <p class="affiliate-description">
+                        Affordable and reliable web hosting solutions. Hostinger offers a range of hosting plans with excellent performance and customer support.                                                
+                    </p>
+                    <a href="https://hostinger.in?REFERRALCODE=FWCVAIBHASJ7" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Hostinger Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> API Layer </h3>
+                    <p class="affiliate-description">
+                        Easy-to-use APIs for developers. API Layer provides a variety of APIs for data, geolocation, and more to enhance your applications.                                                
+                    </p>
+                    <a href="https://apilayer.com?fpr=vaibhav62" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try API Layer Now ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+                
+                <div class="affiliate-card fade-in">
+                    <div class="affiliate-icon">✨</div>
+                    <h3 class="affiliate-title"> Mybid Publisher Ads </h3>
+                    <p class="affiliate-description"> 
+                        Monetize your website with Mybid Publisher Ads. Easy integration and high revenue potential with a variety of ad formats to choose from.
+                    </p>
+                    <a href="https://publishers.mybid.io/signup?ref=17kUh0" target="_blank" rel="noopener noreferrer" class="affiliate-link">Try Mybid Publisher Ads ✨</a>
+                    <div class="affiliate-badge">💰 Refer to Earn Commission</div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1683,13 +1803,30 @@
                 <a href="#affiliates" class="footer-link">Partners</a>
                 <a href="#contact" class="footer-link">Contact</a>
             </div>
-            <p>&copy; 2025 Vaibhav Selukar. Built with vanilla HTML, CSS & JavaScript.</p>
+            
+            <p style="margin-bottom: 1rem; color: var(--slate);"></p>
+            <hr class="solid">
+            <p style="margin-bottom: 1rem; color: var(--slate);"></p>
+            <div> 
+            
             <p style="margin-top: 0.5rem; color: var(--mint);">Certified Professional Scrum Master | PMP | Agile Consultant | AI Automation Specialist</p>
             <p style="margin-top: 1rem; font-size: 0.9rem;">
-                <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">LinkedIn</a> • 
-                <a href="https://github.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">GitHub</a> • 
-                <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: none;">YouTube</a>
+                <a href="https://linkedin.com/in/vaibhav-selukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: underline;">LinkedIn</a> • 
+                <a href="https://github.com/vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: underline;">GitHub</a> • 
+                <a href="https://youtube.com/@vaibhavselukar" target="_blank" rel="noopener noreferrer" style="color: var(--slate); text-decoration: underline;">YouTube</a>
             </p>
+
+                <h3 style="margin-bottom: 0.5rem;">Let's Connect!</h3>
+                <p style="margin-bottom: 1rem; color: var(--slate);">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. 
+                </p>
+                <p> Feel free to reach out! </p>
+            </div>
+            <p style="margin-bottom: 1rem; color: var(--slate);"></p>
+            <hr class="solid">
+            <p style="margin-bottom: 1rem; color: var(--slate);"></p>
+            <p>&copy; 2025 Designed & Built by Vaibhav Selukar. </p>
+        
         </div>
     </footer>
 
